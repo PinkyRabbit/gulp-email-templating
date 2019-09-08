@@ -6,17 +6,7 @@ body {
     margin: 0 auto;
     width: 800px;
     /* font-family needed */
-    font-family: Arial, sans-serif;
+
 }
 
-p {
-    color: bluegray;
-}
-.avatar {
-    width: 250px;
-    height: 250px;
-    background-repeat: no-repeat;
-    background-position: center center;
-    position: relative;
-    cursor: pointer;
-}
+@import 'freelance'

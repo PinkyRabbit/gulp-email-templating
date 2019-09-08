@@ -29,6 +29,7 @@ gulp.task('server', () => {
   gulp.watch('src/sass/**/*.{sass,scss}', gulp.series('completeSeries'));
 });
 
+console.log(mocks)
 // step 1
 gulp.task('deleteBeforeBuild', () => del([ 'dist/*.html' ]));
 
@@ -36,7 +37,10 @@ gulp.task('deleteBeforeBuild', () => del([ 'dist/*.html' ]));
 gulp.task('html', () => gulp
   .src('src/templates/*.ejs')
   .pipe(plumber({ errorHandler }))
-  .pipe(ejs(mocks))
+  .pipe(ejs({
+    ...mocks,
+    baseUrl: `http://localhost:${PORT}`,
+  }))
   .pipe(rename(path => path.extname = '.html'))
   .pipe(gulp.dest('src/prebuild/')));
 

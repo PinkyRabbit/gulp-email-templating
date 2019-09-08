@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html id="freelance">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -7,10 +7,192 @@
     <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
-    <h1>hello world!</h1>
-    <img src="/images/email/0.jpg" alt="logo" class="avatar">
-    <% for(var i=0; i<news.length; i++) {%>
-      <p><%= news[i].h1 %></p>
-    <% } -%>
+	<table align="center" bgcolor="#f0f0f0" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%">
+		<tbody>
+			<tr>
+				<td>
+					<table align="center" border="0" cellpadding="0" cellspacing="0" width="690">
+						<tbody>
+							<tr class="bg-color-grey">
+								<td align="center" width="100%">
+									<a href="<%= links.mainPage.url %>" class="header-link" target="_blank" rel="noopener noreferrer">
+										<img class="top-image" border="0" width="150" src="<%= baseUrl %>/images/email/freelance.png" alt="<%= links.mainPage.title %>">
+									</a>
+                </td>
+              </tr>
+              <tr>
+                <td align="center" width="100%">
+                  <table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="690">
+                    <tbody>
+                      <tr>
+                        <td align="center" width="100%" class="main-row-wrapper">
+                          <table align="center" border="0" cellpadding="0" cellspacing="0" width="690">
+                            <tbody>
+                              <tr><td height="30"></td></tr>
+                              <tr>
+                                <td colspan="3" class="h2-row-wrapper">
+                                  <h2>Hi pinkyrabbit,</h2>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" width="100%">
+                          <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tbody>
+                              <tr bgcolor="#ffffff">
+                                <td width="30"></td>
+                                <td>
+                                  <table align="center" border="0" cellpadding="0" cellspacing="0" width="630">
+                                    <tbody>
+                                      <tr><td colspan="3" height="20"></td></tr>
+                                      <tr><td colspan="3">
+                                        <div class="greeting">Here are the latest projects and contests matching your
+                                                            <a href="<%= links.profile.url %>" target="_blank" rel="noopener noreferrer">profile</a> and
+                                                            <a href="<%= links.profile.url %>" target="_blank" rel="noopener noreferrer">skills</a></div>
+                                      </td></tr>
+                                      <tr>
+                                        <td colspan="3" height="30"></td></tr>
+                                        <tr>
+                                          <td colspan="3">
+                                            <table align="center" bgcolor="#313640" border="0" cellpadding="0" cellspacing="0" height="38" width="630" class="table-header">
+                                              <tbody>
+                                                <tr>
+                                                  <td width="20"></td>
+                                                  <td align="left" valign="middle" width="440">
+                                                    <h3>PROJECT DESCRIPTION</h3>
+                                                  </td>
+                                                  <td width="20"></td>
+                                                  <td width="130">
+                                                    <h3>BUDGET</h3>
+                                                  </td>
+                                                  <td width="20"></td>
+                                                </tr>
+                                              </tbody>
+                                            </table>
+                                            <table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="630" class="content-table">
+                                              <tbody>
+
+                                                <% for(var i=0; i<news.length; i++) {%>
+                                                <tr>
+                                                  <td width="20"></td>
+                                                  <td align="left" height="86" valign="top" width="440" class="padding-td">
+                                                    <a href="<%= links.profile.url %>" target="_blank" rel="noopener noreferrer"><%= news[i].h1 %></a>
+                                                    &nbsp;
+                                                    <% for(var j=0; j<news[i].categories.length; j++) {%>
+                                                      <span class="tag"><%= news[i].categories[j] %></span>
+                                                    <% } %>
+                                                    <div class="clrfix">&nbsp;</div>
+                                                    <div class="content"><%= news[i].description %> <a href="<%= links.profile.url %>" target="_blank" rel="noopener noreferrer">See more</a></div>
+                                                    <div class="clrfix">&nbsp;</div>
+                                                    <div class="meta">
+                                                      <span>Skills:</span>
+                                                      <% for(var j=0; j<news[i].tags.length; j++) {%>
+                                                        <%= news[i].tags[j].toUpperCase() %>
+                                                        <%if ((1+j)!=news[i].tags.length) {%> | <%}%>
+                                                      <% } %>
+                                                    </div>
+                                                  </td>
+                                                  <td width="20"></td>
+                                                  <td align="left" valign="top" width="130" class="action-td">
+                                                    <div class="bid">$15 - $25 USD /hr</div>
+                                                    <div class="clrfix">&nbsp;</div>
+                                                    <table align="center" cellpadding="0" cellspacing="0" width="130" class="button-table">
+                                                      <tbody>
+                                                        <tr>
+                                                          <td align="center" class="button-wrapper">
+                                                            <a href="<%= links.profile.url %>" target="_blank" rel="noopener noreferrer">Bid now</a>
+                                                          </td>
+                                                        </tr>
+                                                      </tbody>
+                                                    </table>
+                                                  </td>
+                                                  <td width="20"></td>
+                                                </tr>
+                                                <tr><td bgcolor="#cccccc" colspan="5" height="1" class="row-as-border"></td></tr>
+                                                <% } %>
+                                              </tbody>
+                                            </table>
+                                          </td>
+                                        </tr>
+
+                                        <tr><td colspan="3" height="30"></td></tr>
+                                        
+                                        <tr>
+                                          <td>
+                                            <table align="center" cellpadding="0" cellspacing="0" class="more">
+                                              <tbody>
+                                                <tr>
+                                                  <td align="center" class="more-wrapper">
+                                                    <a href="<%= links.profile.url %>" target="_blank" rel="noopener noreferrer">View more jobs matching your skills! <img src="<%= baseUrl %>/images/email/freelance-arrow.png"></a>
+                                                  </td>
+                                                </tr>
+                                              </tbody>
+                                            </table>
+                                          </td>
+                                        </tr>
+
+                                        <tr><td colspan="3" height="40"></td></tr>
+                                      </tbody>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="690" class="completion">
+                      <tbody>
+                        <tr>
+                          <td>
+                            <div class="completion-text-1">Regards,</div>
+                            <div class="completion-text-2">The Freelancer Team</div>
+                          </td>
+                        </tr>
+                        <tr><td height="30"></td></tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table align="center" bgcolor="#f0f0f0" border="0" cellpadding="0" cellspacing="0" width="690" class="footer">
+      <tbody>
+        <tr><td height="24"></td></tr>
+
+        <tr>
+          <td align="center">
+            <p>© 2019 Freelancer Technology Pty Limited. All Rights Reserved.<br>Level 20, 680 George Street, Sydney, NSW 2000, Australia</p>
+          </td>
+        </tr>
+
+        <tr><td height="8" width="100%"></td></tr>
+
+        <tr>
+          <td align="center">
+            <span class="footer-links">
+              <a href="<%= links.profile.url %>" target="_blank" rel="noopener noreferrer">Privacy Policy</a> |
+              <a href="<%= links.profile.url %>" target="_blank" rel="noopener noreferrer">Terms and Conditions</a> |
+              <a href="<%= links.profile.url %>" target="_blank" rel="noopener noreferrer">Unsubscribe</a> |
+              <a href="<%= links.profile.url %>" target="_blank" rel="noopener noreferrer">Get Support</a> |
+              <a href="<%= links.profile.url %>" target="_blank" rel="noopener noreferrer">Get Free Credit</a>
+            </span>
+          </td>
+        </tr>
+
+        <tr><td height="16" width="100%"></td></tr>
+
+        </tbody>
+    </table>
 </body>
 </html>
