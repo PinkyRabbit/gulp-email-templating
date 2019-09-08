@@ -1,0 +1,24 @@
+{
+  "name": "gulp-email",
+  "version": "1.0.0",
+  "description": "My gulp config for emails",
+  "main": "gulp.js",
+  "scripts": {
+    "start": "gulp"
+  },
+  "keywords": ["gulp", "email"],
+  "author": "Mikita Melnikau<usesa@yandex.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.0",
+    "gulp-ejs": "^4.1.2",
+    "gulp-inline-css": "^3.3.2",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2"
+  }
+}
