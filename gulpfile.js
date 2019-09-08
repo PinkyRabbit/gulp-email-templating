@@ -42,23 +42,23 @@ gulp.task('html', () => gulp
 
 // step 3
 gulp.task('sass', () => gulp
-	.src('src/sass/*.scss')
-	.pipe(plumber({ errorHandler }))
-	.pipe(sass({ outputStyle: 'expanded' }))
-	.pipe(autoprefixer({
-	    overrideBrowserslist: ['last 10 versions'],
-	    cascade: false
-	}))
-	.pipe(gulp.dest('src/prebuild/css/')));
+  .src('src/sass/*.scss')
+  .pipe(plumber({ errorHandler }))
+  .pipe(sass({ outputStyle: 'expanded' }))
+  .pipe(autoprefixer({
+      overrideBrowserslist: ['last 10 versions'],
+      cascade: false
+  }))
+  .pipe(gulp.dest('src/prebuild/css/')));
 
 // step 4
 gulp.task('inline', () => gulp
-	.src('src/prebuild/*.html')
-	.pipe(plumber({ errorHandler }))
+  .src('src/prebuild/*.html')
+  .pipe(plumber({ errorHandler }))
   .pipe(inlineCss({
-  	removeStyleTags: true,
-  	removeLinkTags: true,
-  	removeHtmlSelectors: true,
+    removeStyleTags: true,
+    removeLinkTags: true,
+    removeHtmlSelectors: true,
   }))
   .pipe(gulp.dest('dist/')));
 
