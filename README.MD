@@ -11,5 +11,4 @@ All your base code is in `src` directory. There are `ejs` module for better html
 
 ## Happy hacking! 
 
-Inline-style: 
 ![email example](https://github.com/PinkyRabbit/gulp-email-templating/blob/master/screenshot.png "example")
